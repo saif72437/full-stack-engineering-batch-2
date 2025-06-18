@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Crazy Website ✨✨🔥</title>
+    <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ 
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            width: 100%;
+
+        }
+        header nav{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2vw 4vw;
+            background-color: rgba(255, 255, 255, 0.386);
+            backdrop-filter: blur(5px);
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        nav h2{
+            font-size: 2rem;
+
+        }
+        nav ul{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+        }
+        nav button, .hero-section button{
+            padding: 10px 12px;
+            background-color: black;
+            color: white;
+            border: none;
+            outline: none;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+
+        main{
+            width: 100%;
+            height: 100vh;
+            background-color: lightblue;
+            background-image: url(https://cdn.pixabay.com/photo/2025/01/16/19/34/cortina-dampezzo-9338185_1280.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-blend-mode: multiply;
+            background-color: #21212163;
+        }
+
+        .hero-section{
+            width: 100%;
+            height: 100%;
+            padding: 2vw 4vw;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            color: white;
+            gap: 20px;
+            
+        }
+        .hero-section h1{
+            font-size: 5rem;
+            line-height: 1.1;
+        }
+
+        .hero-section p{
+            width: 60%;
+        }
+
+        .card-section{
+            width: 100%;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            padding: 4vw 0;
+            justify-content: space-evenly;
+        }
+
+        .card-section .card{
+            width: 350px;
+            background-color: white;
+            padding: 12px;
+            border-radius: 12px;
+        }
+        .card-section .card img{
+            border-radius: 8px;
+            width: 100%;
+        }
+        .card-section .card .text{
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .card-section .card .text button{
+           padding: 10px 12px;
+           background-color: black;
+           color: white;
+           outline: none;
+           border: none;
+           border-radius: 6px;
+           font-size: 1rem;
+        }
+
+
+        @media screen and (max-width: 480px) {
+            nav h2{
+                font-size: 1.3rem;
+            }
+            nav button{
+                font-size: 1rem;
+            }
+            nav ul{
+                display: none;
+            }
+
+            .hero-section h1{
+                font-size: 2.5rem;
+            }
+            .hero-section p{
+              width: 100%;
+            }
+
+            .card-section{
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .card{
+                width: 100%;
+            }
+        }
+
+        ::-webkit-scrollbar{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+ 
+    <main>
+        <header>
+            <nav>
+                <h2 class="item">Our Company</h2>
+                <ul>
+                    <li class="item">Home</li>
+                    <li class="item">About</li>
+                    <li class="item">Contact</li>
+                    <li class="item">Our Services</li>
+                </ul>
+                <button class="item">Sign in</button>
+            </nav>
+        </header>
+
+        <section class="hero-section">
+            <h1>I am a</h1>
+            <h1  id="element">Web Develpoer</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam quo rerum itaque molestias quis, quisquam sit iste perferendis nesciunt neque adipisci quasi optio quod odio alias aperiam repellat possimus eos!</p>
+            <button>Book a tour</button>
+        </section>
+
+    </main>
+
+    <section class="card-section">
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2025/02/11/16/41/swans-9399436_1280.jpg" alt="">
+            <div class="text">
+                <h2>Kalam</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci error a explicabo deleniti nisi.</p>
+                <button>Visit now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2025/02/11/16/41/swans-9399436_1280.jpg" alt="">
+            <div class="text">
+                <h2>Kalam</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci error a explicabo deleniti nisi.</p>
+                <button>Visit now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://cdn.pixabay.com/photo/2025/02/11/16/41/swans-9399436_1280.jpg" alt="">
+            <div class="text">
+                <h2>Kalam</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis adipisci error a explicabo deleniti nisi.</p>
+                <button>Visit now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+
+<div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+    <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1>
+    <p class="fs-5 text-body-secondary">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+  </div>
+
+  <section>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$0<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-dark">Sign up for free</button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-dark">Get started</button>
+          </div>
+        </div>
+      </div>
+   <div class="container">
+    <div class="col ">
+        <div class="card mb-4 rounded-3 shadow-sm border-dark">
+          <div class="card-header py-3 text-bg-dark border-dark">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">$29<small class="text-body-secondary fw-light">/mo</small></h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-dark">Contact us</button>
+          </div>
+        </div>
+      </div>
+   </div>
+    </div>
+
+    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%;"></th>
+            <th style="width: 22%;">Free</th>
+            <th style="width: 22%;">Pro</th>
+            <th style="width: 22%;">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"></use></svg></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</section>
+
+
+<section class="contact-section py-5 bg-light">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Send us a message.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Your message"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-dark">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <button class="btn btn-dark" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+    <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+
+// Initialize Lenis
+const lenis = new Lenis();
+
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+        gsap.from(".item",{
+            y: -100,
+            duration: 0.5,
+            opacity:0,
+            stagger: 0.2
+        })
+
+
+        gsap.from(".card",{
+            y: 200,
+            duration: 0.5,
+            stagger: 0.2,
+            scrollTrigger:{
+                trigger:".card-section",
+                scroller:"body",
+                start:  "top 40%",
+    
+            }
+        })
+
+        var typed = new Typed('#element', {
+      strings: ["Web Developer", "App Developer", "Software Engineer"],
+      typeSpeed: 50,
+      loop: true,
+  loopCount: Infinity,
+    });
+    </script>
+</body>
+</html>

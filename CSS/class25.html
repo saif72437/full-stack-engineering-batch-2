@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: grid;
+            place-content: center;
+        }
+        .main .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+
+            transition-duration: 5s;
+            transition-delay: 3s;
+            transition-timing-function: ease-in-out;
+            /* transition-property: border-radius, background-color; */
+            transition-property: all;
+            transition: all ease-in-out 3s 2s;
+        }
+        .box:hover{
+            border-radius: 50%;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

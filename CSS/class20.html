@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky and Fixed </title>
+    <style>
+
+        /* 
+            position: sticky;
+                => It will maintain its orignal space
+                => It will move wrt its orignal space
+                => It will not take left and right
+                => It will me inside its parent always
+
+            position: fixed;
+                => It will not maintain its orignal space
+                => It will move wrt its nearest positioned parent element
+                => It can go outside from parent
+        
+        */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main, .main2, .main3{
+            width: 100vw;
+            height: 100vh;
+        }
+        .main{
+            display: flex;
+            background-color: lightblue;
+            gap: 20px;
+            position: relative;
+        }
+        .main2{
+            background-color: rgb(63, 139, 164);
+        }
+        .main3{
+            background-color: rgb(7, 79, 103);
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        #box3{
+            background-color: rgb(17, 110, 17);
+            position: sticky;
+            top: 200px;
+            right: 200px;
+        }
+
+        #box4{
+            background-color: lightseagreen;
+            position: fixed;
+            top: 130px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+        <div class="box" id="box5">Box 5</div>
+    </div>
+    <div class="main2"></div>
+    <div class="main3"></div>
+</body>
+</html>

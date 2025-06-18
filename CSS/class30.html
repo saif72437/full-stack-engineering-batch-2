@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            background-color : #c7c7c7;
+      
+            }
+
+            img{
+                filter: drop-shadow(5px 5px 15px red) blur(5px);
+                /* filter: blur(15px);
+                filter: grayscale(100); */
+            }
+      
+    </style>
+</head>
+<body>
+    <div class="main">
+        <img src="image-removebg-preview (2).png" alt="">
+    </div>
+</body>
+</html>

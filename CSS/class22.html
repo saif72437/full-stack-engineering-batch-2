@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .main{
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100vw;
+            min-height: 100vh;
+            background-color: #c7c7c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            width: 80%;
+            height: 350px;
+            background-color: #806D5A;
+            padding: 1vw;
+            display: flex;
+            align-items: center;
+            gap: 2vw;
+            border-radius: 16px;
+            color: #BEBDBB;
+        }
+        .card img{
+            width: 350px;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .text-div{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 10px;
+        }
+        button{
+            padding: 10px 12px;
+            font-size: 1rem;
+            background-color: lightcoral;
+            outline: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        @media screen and (max-width: 480px) {
+            .main{
+                padding: 1vw;
+                gap: 20px;
+            }
+            .card{
+                padding: 2vw;
+                width: 100%;
+                height: 400px;
+                flex-direction: column;
+            }
+            .card img{
+                width: 100%;
+                height: 200px;
+            }
+            .text-div{
+                width: 100%;
+            }
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ef/62/2c/ef622cc489f83b6eefba054434b426be.jpg" alt="Shoes Image">
+            <div class="text-div">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, porro? Quo eligendi molestiae recusandae quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, doloremque!</p>
+                <button>buy now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ef/62/2c/ef622cc489f83b6eefba054434b426be.jpg" alt="Shoes Image">
+            <div class="text-div">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, porro? Quo eligendi molestiae recusandae quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, doloremque!</p>
+                <button>buy now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ef/62/2c/ef622cc489f83b6eefba054434b426be.jpg" alt="Shoes Image">
+            <div class="text-div">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, porro? Quo eligendi molestiae recusandae quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, doloremque!</p>
+                <button>buy now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ef/62/2c/ef622cc489f83b6eefba054434b426be.jpg" alt="Shoes Image">
+            <div class="text-div">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, porro? Quo eligendi molestiae recusandae quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, doloremque!</p>
+                <button>buy now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/ef/62/2c/ef622cc489f83b6eefba054434b426be.jpg" alt="Shoes Image">
+            <div class="text-div">
+                <h2>Heading</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, porro? Quo eligendi molestiae recusandae quas? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, doloremque!</p>
+                <button>buy now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

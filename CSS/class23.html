@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psudo classes</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(4, 43, 57);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 50px;
+            justify-content: center;
+        }
+        .box{
+            height: 200px;
+            width: 200px;
+            background-color: red;
+        }
+        /* psudo classes */
+
+        .box:hover{
+            background-color: lime;
+            border-radius: 12px;
+        }
+        .box:active{
+            background-color: lightblue;
+        }
+        input{
+            padding: 10px 20px;
+            width: 300px;
+            border-radius: 5px;
+        }
+        input:focus{
+            background-color: lime;
+            border: 2px solid orange;
+            outline: 2px solid orange;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="box"></div>
+        <input type="text">
+    </div>
+    
+</body>
+</html>

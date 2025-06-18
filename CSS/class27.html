@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            gap: 50px;
+            place-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        .main .box{
+            height: 100px;
+            width: 100px;
+            background-color: lightcoral;
+            display: grid;
+            place-content: center;
+
+        }
+
+        /*
+            rotate
+            scale
+            skew
+            translate
+        
+        */
+
+        #box1{
+            transform: rotateX(45deg);
+        }
+        #box2{
+            transform: rotateY(-45deg);
+        }
+        #box3{
+            transform: rotate(-45deg);
+        }
+        #box4{
+            transform: scaleX(1.5);
+        }
+        #box5{
+            transform: scaleY(1.5);
+        }
+        #box6{
+            transform: scale(1.5);
+        }
+        #box7{
+            transform: skewX(45deg);
+        }
+        #box8{
+            transform: skewY(45deg);
+        }
+        #box9{
+            transform: skew(45deg);
+        }
+        #box10{
+            /* transform: translateX(150px); */
+            /* transform: translateY(150px); */
+            transform: translate(150px, 500px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box" id="box1">box 1</div>
+        <div class="box" id="box2">box 2</div>
+        <div class="box" id="box3">box 3</div>
+        <div class="box" id="box4">box 4</div>
+        <div class="box" id="box5">box 5</div>
+        <div class="box" id="box6">box 6</div>
+        <div class="box" id="box7">box 7</div>
+        <div class="box" id="box8">box 8</div>
+        <div class="box" id="box9">box 9</div>
+        <div class="box" id="box10">box 10</div>
+        <!-- <div class="box" id="box11">box 11</div>
+        <div class="box" id="box12">box 12</div> -->
+    </div>
+</body>
+</html>

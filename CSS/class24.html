@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> psudo elements</title>
+
+    <style>
+        p::first-line{
+            background-color: blue;
+        }
+        p::first-letter{
+            font-size: 5rem;
+        }
+        .box{
+            height: 100px;
+            width: 100px;
+            background-color: lightcoral;
+             margin: 20px;
+                position: relative;
+            margin: auto; }
+
+        .box::before{
+            position: absolute;
+            content: "my name";
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            left: -100px;
+            }
+        .box::after{
+            position: absolute;
+            content: "my name";
+            height: 100px;
+            width: 100px;
+            background-color: red;
+            right: -100px;
+            }
+
+       
+
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam debitis ad odit? Quos, non repellat ipsum vel incidunt quidem sapiente. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis excepturi possimus nam veritatis fugiat facilis aliquam accusamus dolore soluta, sit blanditiis quod, ducimus, optio dolorem non. Numquam fugiat sapiente accusamus unde, qui commodi hic illum eum quo sequi itaque iusto ipsam perspiciatis mollitia voluptatem libero expedita voluptates sed. Magni rerum nihil ut minus quae quisquam aperiam itaque. Nesciunt, adipisci reiciendis ea alias voluptates blanditiis, temporibus fuga harum itaque id ut, ipsam eos! Excepturi, nostrum nulla sint quis, exercitationem veniam amet quisquam non assumenda facere mollitia explicabo veritatis dolores accusamus provident molestiae voluptas animi nesciunt? Quia autem laudantium quos eius unde, vero iure placeat voluptatibus deleniti laboriosam sapiente porro excepturi corporis sequi nesciunt corrupti eum necessitatibus natus tempora, accusamus, veniam mollitia quas. Maiores fugit eos consequatur? Minima, ipsam, nulla impedit accusantium laboriosam totam praesentium labore temporibus voluptatum animi aliquam non! Nobis obcaecati ipsam accusamus cum, officia culpa, odio quo quos est numquam illum ullam laboriosam unde! Harum a maiores facilis eveniet error incidunt repellat voluptate explicabo debitis dolore. Harum modi cum reprehenderit qui voluptate consectetur illum, adipisci voluptas reiciendis magnam dolore unde maiores tenetur. Quam ad harum, velit nobis rerum quae, amet recusandae impedit obcaecati temporibus autem. Rem ea natus aut.</p>
+        
+        <div class="box"></div>
+
+    </div>
+</body>
+</html>

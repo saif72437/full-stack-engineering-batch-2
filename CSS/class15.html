@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            display: flex;
+            gap: 20px;
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+
+            /* cross pr apko space-between, space-evenly, space-around use krna hy */
+            align-content: space-between;
+            align-content: space-around;
+            align-content: space-evenly;
+
+
+            /* 
+
+            parent properties
+            
+                display flex
+                align items
+                justify content
+                flex wrap
+                align content
+                gap
+
+                flex flow [short hand]
+
+
+            child properties
+            order
+            flex-grow
+            flex-shrink
+            
+            
+            */
+
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+        }
+        #box3{
+            background-color: rebeccapurple;
+            order: 1;
+        }
+        #box5{
+            order: 2;
+        }
+
+        #box7{
+            background-color: red;
+            flex-grow: 20;
+        }
+        #box2{
+            background-color: lightgreen;
+            flex-shrink: 20;
+            /* flex wrap hatana hoga */
+        }
+  </style>
+</head>
+<body>
+
+ 
+    <div class="main">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+        <div class="box" id="box3">Box 3</div>
+        <div class="box" id="box4">Box 4</div>
+        <div class="box" id="box5">Box 5</div>
+        <div class="box" id="box6">Box 6</div>
+        <div class="box" id="box7">Box 7</div>
+        <div class="box" id="box8">Box 8</div>
+        <div class="box" id="box9">Box 9</div>
+        <div class="box" id="box10">Box 10</div>
+    </div>
+
+</body>
+</html>

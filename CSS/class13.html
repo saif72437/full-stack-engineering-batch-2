@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .main{
+            /* flex container */
+            width: 100vw;
+            height: 100vh;
+            background-color: crimson;
+            display: flex;
+            gap: 20px;
+            /* align items will always work on cross axis => it have 3 properties */
+            /* align-items: start; */
+            /* align-items: center; */
+            /* align-items: end; */
+
+            /* justify-content will always work on main axis => it have 6 properties */
+            justify-content: start;
+            justify-content: center;
+            justify-content: end;
+            justify-content: space-between;
+            justify-content: space-around;
+            justify-content: space-evenly;
+        }
+        .box{
+            /* flex items */
+            background-color: lightblue;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+   <div class="main">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+   </div>
+</body>
+</html>

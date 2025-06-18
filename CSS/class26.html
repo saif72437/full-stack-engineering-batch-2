@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            padding: 2vw;
+        }
+        .main .box{
+            width: 200px;
+            height: 200px;
+            background-color: lightcoral;
+            /* animation-name: moveFromLeftToRight;
+            animation-duration: 3s;
+            animation-delay: 0.2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 1;
+            position: absolute;
+            animation-fill-mode: backwards;
+            animation-direction: alternate-reverse; */
+
+            position: absolute;
+            animation: moveFromLeftToRight 6s ease 0.2s 1 alternate forwards;
+            animation-timing-function: linear;
+            animation-timing-function: cubic-bezier(0, 0, 0, 1);
+            animation-timing-function: cubic-bezier(1,1,1,0);
+        }
+
+        @keyframes moveFromLeftToRight {
+            from{
+                left: 200px;
+            }
+            to{
+                left: 1000px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

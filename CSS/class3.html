@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in css</title>
+    <style>
+        /* tag name or element selector */
+        p{
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+
+        /* id selector */
+        #saif{
+            background-color: blue;
+            color: white;
+        }
+        /* class selector */
+        .name{
+            background-color: bisque;
+            color: black;
+        }
+        .myname{
+            background-color: rebeccapurple;
+        }
+        /* group selector */
+        main, section, article{
+            background-color: burlywood;
+        }
+
+        /* child selector */
+       div p{
+            background-color: aqua;
+            color: black;
+        }
+
+        /* direct child selector */
+        section > p{
+            background-color: red;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione veniam molestias vero, recusandae nemo sit perferendis dolorem quas dignissimos tenetur dolor, expedita quae inventore repellendus exercitationem earum deleniti. Quisquam, temporibus.</p>
+    
+    <h2 id="saif">Saifullah Khan</h2>
+
+
+    <h3 class="name myname">Saifullah Khan</h3>
+    <h4 class="name">Saifullah Khan</h4>
+    <h5 class="name">Saifullah Khan</h5>
+
+
+    <main>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo expedita sed facilis quos eum ipsam consequatur, itaque optio nostrum id autem ad repellat iure hic officiis sequi provident quisquam rerum.</main>
+    <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aspernatur molestiae dolore quas alias magni adipisci vero laborum! Recusandae, dicta dolorem. Placeat rerum sunt voluptates expedita nihil. Saepe, fuga quidem?</section>
+    <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nam debitis non omnis dolor error ea quisquam dolorem repellendus cupiditate nulla necessitatibus iusto voluptatum, deleniti iure tenetur tempora dolorum incidunt!</article>
+
+
+
+    <div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea quasi id rerum excepturi, ad, voluptates minima magnam cum sequi consectetur laudantium optio officia veniam. Temporibus maiores minus vitae suscipit fuga.</p>
+    </div>
+
+
+    <section>
+        <article>
+            <p>paragraph inside section inside article</p>
+        </article>
+        <p>paragraph inside section</p>
+    </section>
+
+
+</body>
+</html>

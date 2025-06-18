@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Block Elements</title>
+    <style>
+        p, div{
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+            margin: 20px;
+            padding: 40px;
+            /* 
+                block element:
+                        => It will always came in different line
+                        => By default it will cover completed width from extream left to extream right in parent   
+                        => It will also take custom width and height  
+                        => It will also take custom margin from all sides
+                        => It will also take custom padding from all sides
+            */
+        }
+
+        span, i{
+            background-color: lightcoral;
+            height: 200px;
+            width: 200px;
+            margin: 50px;
+            padding: 30px;
+            /* 
+            
+            Inline element:
+                    => It will always came in same line
+                    => By default it will take width fit to the content
+                    => It will not take custom width and height
+                    => It will only take custom margin from left and right
+                    => It will take custom padding from all sides
+            
+            */
+        }
+    </style>
+</head>
+<body>
+    <p>Saifullah Khan</p>
+    <div>Saifullah Khan</div>
+
+    <span>Saifullah Khan</span>
+    <i>Saifullah Khan</i>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color In CSS</title>
+    <style>
+        .named-color{
+            background-color: lawngreen;
+        }
+        .rgb-color{
+            /* 
+            
+            rgb:
+            r => red  => 0 - 255
+            g => green  => 0 - 255
+            b => blue  => 0 - 255
+
+            0 - black
+            255 - white
+            
+            */
+
+        background-color: rgba(97, 195, 234, 0.619);
+        }
+
+        .hex-color{
+            /* 
+            
+            decimal number system:
+                0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+            Hexa Decimal number system:
+                16 digit => 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F
+
+                1 COLOR = 6 HEX DIGIT OR 3 HEX DIGIT
+                FOR EXAMPLE: 4A32C7
+                    => 4A - RED
+                    => 32 - GREEN
+                    => C7 - BLUE
+                
+                FOR EXAMPLE: 32A
+                    => 3 - RED
+                    => 2 - GREEN
+                    => A - BLUE
+                
+                0 - black
+                f - white
+
+
+            */
+            /* background-color: #ff2; */
+            background-color: #0fc674ff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="named-color">named-color</div>
+    <div class="rgb-color">rgb-colors</div>
+    <div class="hex-color">hex-color</div>
+    
+</body>
+</html>
