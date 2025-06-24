@@ -10,3 +10,16 @@ let result2 = result * 100
 
 console.log(result2);
 
+
+// wap to print number from 1 to n
+
+function printNumbersFrom1toN(num) {
+    for (let index = 1; index <= num; index++) {
+        
+        console.log(index);
+        
+    }
+}
+
+printNumbersFrom1toN(500)
+
