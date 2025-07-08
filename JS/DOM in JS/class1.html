@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+    #hidden{
+        display: none;
+    }
+   </style>
+    
+</head>
+<body>
+  
+    <p id="para">Lorem ipsum dolor sit amet <b id="hidden">Saifullah Khan</b> consectetur adipisicing elit. Molestiae, soluta!</p>
+
+    <script>
+
+        let myparagraph  = document.getElementById("para")
+
+        console.log(myparagraph);
+        console.log(myparagraph.textContent); // kh isky ander aur isky childern k ander jitna b text hy mujay srf wo dekna hy - ye hidden b dikayega
+
+        console.log(myparagraph.innerText);// ye hidden nhi dikayega
+
+        console.log(myparagraph.innerHTML);
+        
+        
+        
+        
+
+    </script>
+  
+</body>
+</html>
