@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Selector in JS</title>
+</head>
+<body>
+    
+    <p class="mybox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia nobis vero maiores, sapiente molestias nihil aut sed tenetur odit, explicabo alias laborum in exercitationem. Voluptatem accusantium facilis neque aliquam?</p>
+    <h2 class="mybox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum est iusto necessitatibus.</h2>
+    <span class="mybox">Saifullah Khan</span>
+
+
+    <script>
+
+        let mybox = document.getElementsByClassName("mybox")
+
+        console.log(mybox);
+
+        
+        console.log(mybox[2].innerHTML);
+        console.log(mybox.length);
+
+        mybox[1].style.backgroundColor = "red"
+
+        mybox[0].style.backgroundColor = "pink"
+        
+        
+
+        
+       
+        
+        
+        
+    </script>
+
+</body>
+</html>

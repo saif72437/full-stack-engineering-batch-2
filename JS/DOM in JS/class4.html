@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element by Tag name</title>
+    
+    <style>
+        p{
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae delectus laborum ex, dicta ipsum itaque repudiandae adipisci minus nostrum quam veniam sapiente consequatur impedit ducimus facilis nesciunt, nemo suscipit?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae delectus laborum ex, dicta ipsum itaque repudiandae adipisci minus nostrum quam veniam sapiente consequatur impedit ducimus facilis nesciunt, nemo suscipit?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae delectus laborum ex, dicta ipsum itaque repudiandae adipisci minus nostrum quam veniam sapiente consequatur impedit ducimus facilis nesciunt, nemo suscipit?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae delectus laborum ex, dicta ipsum itaque repudiandae adipisci minus nostrum quam veniam sapiente consequatur impedit ducimus facilis nesciunt, nemo suscipit?</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit beatae delectus laborum ex, dicta ipsum itaque repudiandae adipisci minus nostrum quam veniam sapiente consequatur impedit ducimus facilis nesciunt, nemo suscipit?</p>
+
+
+    <script>
+
+
+        let para = document.getElementsByTagName("p")
+        // para[0].style.backgroundColor = "red"
+        // para[3].style.backgroundColor = "red"
+
+        console.log(para);
+        
+
+        for(let i = 0; i < para.length; i++){
+            para[i].style.backgroundColor = "red"
+            para[i].style.width = "200px"
+            para[i].style.borderRadius = "12px"
+            para[i].style.padding = "12px"
+            para[i].style.border = "2px solid black"
+
+        }
+
+        
+    </script>
+
+
+</body>
+</html>
