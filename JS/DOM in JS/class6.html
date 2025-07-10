@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     
+    </style>
+</head>
+<body>
+    <div class="mybox">hello i am a box 1</div>
+    <div class="mybox">hello i am a box 2</div>
+    <div class="mybox">hello i am a box 3</div>
+    <div class="mybox">hello i am a box 4</div>
+    <div class="mybox">hello i am a box 5</div>
+
+
+
+    <script>
+
+        let mybox = document.querySelectorAll(".mybox")
+        
+        // without loop
+        // mybox[0].style.backgroundColor = "red"
+        // mybox[0].style.margin = "10px"
+
+        // mybox[1].style.backgroundColor = "red"
+        // mybox[1].style.margin = "10px"
+        
+        // mybox[2].style.backgroundColor = "red"
+        // mybox[2].style.margin = "10px"
+        
+        // mybox[3].style.backgroundColor = "red"
+        // mybox[3].style.margin = "10px"
+        
+        // mybox[4].style.backgroundColor = "red"
+        // mybox[4].style.margin = "10px"
+        
+
+        //for loop
+
+        // for(let i = 0; i<mybox.length; i++){
+        //     mybox[i].style.backgroundColor = "red"
+        //     mybox[i].style.margin = "10px"
+            
+        // }
+
+
+
+        //for each loop
+        mybox.forEach((singleBox)=>{
+            singleBox.style.backgroundColor = "red"
+            singleBox.style.margin = "10px"
+        })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
