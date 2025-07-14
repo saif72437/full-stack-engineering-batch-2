@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <div class="w-full min-h-screen bg-slate-900 p-20 flex flex-col items-center">
+
+        <!-- input button div -->
+        <div class="w-full flex items-center justify-center gap-3 text-white">
+            <input id="input" type="text" placeholder="Enter something..." class="p-3 border-white border-2 outline-none rounded-md  w-[45%]">
+            <button id="btn" class="p-3 outline-none border-none bg-slate-600 hover:bg-slate-700 cursor-pointer w-[8%] rounded-md">Add</button>
+        </div>
+
+        <!-- todo container -->
+         <div id="todo-container" class="w-full mt-10 flex flex-col items-center gap-3">
+           
+         </div>
+    </div>
+
+    
+
+    <script>
+
+        let btn = document.querySelector("#btn")
+        let input = document.querySelector("#input")
+        let todoContainer = document.querySelector("#todo-container")
+
+        btn.addEventListener("click", ()=>{
+            let value = input.value
+
+            if (value) {
+                let todo = document.createElement("div")
+            todo.className = "w-[45%] p-3 text-white bg-slate-600 rounded-md"
+            
+            
+            todo.innerHTML = value
+
+            todoContainer.append(todo)
+
+            input.value = ""
+            value = ""
+            }
+            else{
+                return
+            }
+            
+            
+            
+        })
+
+    </script>
+
+</body>
+</html>
