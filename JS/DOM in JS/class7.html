@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Click</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-content: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="main"><button>click me</button></div>
+
+
+<script>
+
+    let button = document.querySelector("button")
+
+
+    function myFun(){
+        console.log("saif");
+        
+    }
+
+
+    let myFun2 = ()=>{
+        console.log("saifullah khan arrow");
+        
+    }
+
+    // button.addEventListener("click", myFun )
+
+    // button.addEventListener("click", myFun2 )
+
+
+
+    // button.addEventListener("click", function(){
+    //     console.log("Saif annonumus");
+        
+    // } )
+    
+    
+    button.addEventListener("mouseleave", () => {
+        console.log("Saif arrow function");
+        
+    } )
+
+
+</script>
+
+
+</body>
+</html>
