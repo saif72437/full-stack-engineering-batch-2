@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note App</title>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+   <div class="min-h-screen w-full bg-slate-900 flex">
+            <div class="w-[30%] h-screen bg-blue-200 flex flex-col items-center p-[2vw] gap-3">
+                
+                <input type="text" id="title" placeholder="title..." 
+                class="p-2 bg-white outline-none border-none rounded-md w-full">
+                
+                <textarea name="" id="description" 
+                rows="7"
+                placeholder="description..."
+                class="p-2 w-full bg-white outline-none border-none rounded-md"></textarea>
+                
+                <input id="color"  type="color">
+                
+                <button id="add-btn" type="button" class="text-white w-full bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Default</button>
+            </div>
+            <div id="note-container" class="w-[70%] flex flex-wrap gap-3 h-screen bg-blue-500 p-[2vw]">
+                <!-- note -->
+                <div class="p-2 bg-white w-[250px] rounded-md shadow-md" >
+                    <h2 class="text-xl font-semibold">Title</h2>
+                    <p class="text-sm font-regular text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae id minima libero quas, veniam commodi assumenda dolorum similique iusto nulla hic facilis. Iusto ipsam, possimus laborum tempora eos delectus distinctio!</p>
+
+                    <div class="delete-btn flex justify-end w-full">
+                        ❌
+                    </div>
+
+
+                </div>
+            </div>
+
+            
+
+   </div>
+
+   <script>
+
+    let title = document.querySelector("#title")
+    let description = document.querySelector("#description")
+    let color = document.querySelector("#color")
+    let addBtn = document.querySelector("#add-btn")
+    let noteContainer = document.querySelector("#note-container")
+
+
+    addBtn.addEventListener("click", ()=>{
+        let data = {
+            title: title.value,
+            description: description.value,
+            color: color.value
+        }
+
+        let myData = JSON.stringify(data)
+
+        console.log(myData, typeof myData);
+
+        // localStorage.setItem(title.value, myData)
+        localStorage.setItem(Date.now(), myData)
+
+        renderElementsOnDom()
+        
+        
+    })
+
+
+    function renderElementsOnDom() {
+
+        noteContainer.innerHTML = ""
+
+        for(let i = 0; i <= localStorage.length; i++){
+           let key = localStorage.key(i)
+           let value = localStorage.getItem(key)
+        
+            let myValue = JSON.parse(value)
+
+            console.log(myValue);
+
+            let note = document.createElement("div")
+            note.className = `p-2 bg-[${myValue.color}] w-[250px] rounded-md shadow-md`
+            
+            note.innerHTML = `
+                 <h2 class="text-xl font-semibold">${myValue.title}</h2>
+                    <p class="text-sm font-regular text-gray-400">${myValue.description}</p>
+
+                    <div class="delete-btn flex justify-end w-full">
+                        ❌
+                    </div>
+            `
+
+
+            noteContainer.appendChild(note)
+           
+            
+        }
+        
+    }
+
+    renderElementsOnDom()
+
+   </script>
+</body>
+</html>
