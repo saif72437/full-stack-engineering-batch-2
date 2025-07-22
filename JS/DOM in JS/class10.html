@@ -62,7 +62,7 @@
         console.log(myData, typeof myData);
 
         // localStorage.setItem(title.value, myData)
-        localStorage.setItem(Date.now(), myData)
+        localStorage.setItem(data.title, myData)
 
         renderElementsOnDom()
         
@@ -89,14 +89,25 @@
                  <h2 class="text-xl font-semibold">${myValue.title}</h2>
                     <p class="text-sm font-regular text-gray-400">${myValue.description}</p>
 
-                    <div class="delete-btn flex justify-end w-full">
+                    <div class="delete-btn cursor-pointer flex justify-end w-full">
                         ❌
                     </div>
             `
 
 
+
+
             noteContainer.appendChild(note)
            
+
+            let deleteBtn = note.querySelector(".delete-btn")
+
+            deleteBtn.addEventListener("click", ()=>{
+                localStorage.removeItem(key)
+                window.location.reload()
+                
+            })
+
             
         }
         
