@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+
+        }
+        .main{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .increase-font{
+            font-size: 110px;
+            
+        }
+        #began{
+            transition: all ease-in-out 0.3s;
+        }
+        ::selection{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+            <div class="increase-font" id="began">🍆</div>
+    
+        <div class="price">
+                <h2>200 rs</h2>
+                <button>buy</button>
+        </div>
+        </div>
+
+    <script>
+        let began = document.querySelector("#began")
+        let price = document.querySelector(".price")
+        
+        price.style.display = "none"
+
+        setTimeout(()=>{
+                price.style.display = "block"
+        }, 5000)
+
+        setInterval(() => {
+            began.classList.toggle("increase-font")
+        }, 300);
+
+    </script>
+</body>
+</html>
