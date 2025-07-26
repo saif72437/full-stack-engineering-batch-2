@@ -5,6 +5,6 @@ console.log("before")
 setTimeout(()=>{
     console.log("saif");
     
-}, -5)
+}, 0)
 
 console.log("after")
