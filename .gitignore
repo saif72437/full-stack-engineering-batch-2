@@ -1,0 +1,39 @@
+# Node modules
+**/node_modules/
+
+# Environment files
+**/.env
+**/.env.*
+
+# Build output
+**/dist/
+**/build/
+**/out/
+.cache/
+.next/
+.vite/
+.nuxt/
+
+# Logs
+*.log
+*.log.*
+
+# Lock files (optional, remove if needed)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Editor/IDE settings
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.swp
+*.bak
+*.orig
+*.rej
