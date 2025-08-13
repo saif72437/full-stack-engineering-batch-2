@@ -3,19 +3,24 @@ import Input from "./components/Input"
 import Button from "./components/Button"
 import Card from "./components/Card"
 import { useEffect, useState } from "react"
+import CardSkeleton from "./components/CardSkeleton"
 function App() {
   
 
 const [inputValue, setInputValue] = useState("")
 const [userData, setUserData] = useState({})
+const [loading, setLoading] = useState(false)
+
 
 async function apiCall(){
+    setLoading(true)
   let response = await fetch(`https://api.github.com/users/${inputValue}`)
   let data = await response.json()
 
   console.log(data);
   
   setUserData(data)
+  setLoading(false)
 }
 
 
@@ -42,7 +47,13 @@ async function apiCall(){
 
             </div>
             <div className='flex items-center justify-center mt-20'>
-              <Card imagelink={userData.avatar_url} name={userData.name} username={userData.login}/>
+              {
+                loading && <CardSkeleton/>
+              }
+              {
+
+                !loading && <Card imagelink={userData.avatar_url} name={userData.name} username={userData.login}/>
+              }
             </div>
           </div>
         
