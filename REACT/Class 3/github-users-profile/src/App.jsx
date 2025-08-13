@@ -6,7 +6,17 @@ import { useEffect, useState } from "react"
 function App() {
   
 
-     const [inputValue, setInputValue] = useState("")
+const [inputValue, setInputValue] = useState("")
+const [userData, setUserData] = useState({})
+
+async function apiCall(){
+  let response = await fetch(`https://api.github.com/users/${inputValue}`)
+  let data = await response.json()
+
+  console.log(data);
+  
+  setUserData(data)
+}
 
 
   return (
@@ -20,19 +30,19 @@ function App() {
               <Input
 
                   onChangeFunction={(e)=>{
-                    setInputValue(e.target.value)
+                      setInputValue(e.target.value)
                     
                   }}
               
               />
               <Button myClickFunction={()=>{
-                console.log("hello g");
+                apiCall()
                 
               }}/>
 
             </div>
             <div className='flex items-center justify-center mt-20'>
-              <Card/>
+              <Card imagelink={userData.avatar_url} name={userData.name} username={userData.login}/>
             </div>
           </div>
         
