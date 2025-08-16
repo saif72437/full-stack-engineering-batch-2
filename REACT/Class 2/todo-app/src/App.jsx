@@ -1,44 +1,25 @@
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useState } from 'react'
+import useApiCall from './hooks/useApiCall';
 
 function App() {
-  const [count, setCount] = useState(0);
 
-  const [inputValue, setInputValue] = useState("");
+const {todo, loading} =  useApiCall()
 
+console.log(todo);
 
-  let sum = useMemo(()=>{
-      let count = 0
-      for(let i = 0; i <= inputValue; i++){
-          count = count + i
-      }
-
-      return count
-
-  }, [inputValue]) // when inputValue changes this useMemo will re-run
-
- 
-
-  return (
-    <div>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => {
-          setInputValue(e.target.value);
-        }}
-      />
-
-      <p>Sum is {sum}</p>
-
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Counter {count}
-      </button>
-    </div>
-  );
+if (loading) {
+  return <div>loading</div>
 }
 
-export default App;
+
+  
+  return (
+    <div>
+        {data.username}
+    </div>
+  )
+}
+
+export default App
+
+
