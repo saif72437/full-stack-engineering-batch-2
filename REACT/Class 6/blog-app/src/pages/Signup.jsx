@@ -11,7 +11,7 @@ function Signup() {
     <div className='w-full h-screen bg-slate-400 flex items-center justify-center'>
         {/* card */}
         <div className='p-4 bg-white rounded-md flex flex-col items-center justify-center gap-3'>
-           <MyHeading2 text={"Login"}/>
+           <MyHeading2 text={"Sigup"}/>
            <MyInput onChange={(e)=>setName(e.target.value)} value={name} type={"text"} placeholder={"John Doe"}/>
             <MyInput onChange={(e)=>setEmail(e.target.value)} value={email} type={"email"} placeholder={"John@gmail.com"}/>
             <MyInput onChange={(e)=>setPassword(e.target.value)} value={password} type={"password"} placeholder={"******"}/>
@@ -19,7 +19,7 @@ function Signup() {
            <MyButton onClick={()=>{
             console.log(email, password, name);
             
-           }} text={"Login"} />
+           }} text={"Signup"} />
         </div>
     </div>
   )
