@@ -6,11 +6,15 @@ import Login from "./pages/Login"
 import Profile from "./pages/Profile"
 import SingleBlog from "./pages/SingleBlog"
 import CreateBlog from "./pages/CreateBlog"
+import Navbar from './components/navbar'
+import { Toaster } from 'sonner'
 
 function App() {
   return (
     <div>
+         <Toaster/>
       <BrowserRouter>
+      <Navbar/>
           <Routes>
 
               <Route path="/" element={<Home/>} />

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import MyInput from '../components/MyInput'
 import MyButton from '../components/MyButton'
 import MyHeading2 from '../components/MyHeading2'
+import { toast } from 'sonner'
 
 function Signup() {
   const [email, setEmail] = useState("")
@@ -17,7 +18,9 @@ function Signup() {
             <MyInput onChange={(e)=>setPassword(e.target.value)} value={password} type={"password"} placeholder={"******"}/>
 
            <MyButton onClick={()=>{
-            console.log(email, password, name);
+            if(!email || !password || !name){
+              toast.error("Please fill all the fields")
+            }
             
            }} text={"Signup"} />
         </div>
