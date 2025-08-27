@@ -1,28 +1,46 @@
-import React, { useState } from 'react'
-import MyInput from '../components/MyInput'
-import MyButton from '../components/MyButton'
-import MyHeading2 from '../components/MyHeading2'
+import { NavLink } from "react-router-dom";
+import Input from "../components/Input";
 
 function Signup() {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [name, setName] = useState("")
   return (
-    <div className='w-full h-screen bg-slate-400 flex items-center justify-center'>
-        {/* card */}
-        <div className='p-4 bg-white rounded-md flex flex-col items-center justify-center gap-3'>
-           <MyHeading2 text={"Sigup"}/>
-           <MyInput onChange={(e)=>setName(e.target.value)} value={name} type={"text"} placeholder={"John Doe"}/>
-            <MyInput onChange={(e)=>setEmail(e.target.value)} value={email} type={"email"} placeholder={"John@gmail.com"}/>
-            <MyInput onChange={(e)=>setPassword(e.target.value)} value={password} type={"password"} placeholder={"******"}/>
+    <div className="flex items-center justify-center h-[calc(100vh-80px)] px-4 bg-neutral-950">
+      <div className="w-full max-w-md bg-neutral-900 rounded-2xl border border-neutral-800 p-8 shadow-xl">
+        
+        {/* Heading */}
+        <h2 className="text-2xl font-bold text-center text-white mb-6">
+          Create an Account
+        </h2>
 
-           <MyButton onClick={()=>{
-            console.log(email, password, name);
-            
-           }} text={"Signup"} />
+        <div className="w-full space-y-4">
+          {/* Inputs */}
+          <Input label="Name" placeholder="Your name" />
+          <Input label="Email" type="email" placeholder="Enter your email" />
+          <Input label="Password" type="password" placeholder="••••••••" />
+
+          {/* Button */}
+          <button className="w-full py-3 rounded-xl text-white font-semibold bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 transition duration-200">
+            Sign Up
+          </button>
         </div>
+
+        {/* Divider */}
+        <div className="flex items-center gap-2 my-6">
+          <div className="flex-1 h-px bg-neutral-700" />
+          <span className="text-neutral-400 text-sm">OR</span>
+          <div className="flex-1 h-px bg-neutral-700" />
+        </div>
+
+        {/* Footer */}
+        <p className="text-sm text-center text-neutral-400 mt-6">
+          Already have an account?{" "}
+          <NavLink
+           to="/login" className="text-cyan-400 hover:underline">
+            Log In
+          </NavLink>
+        </p>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Signup
+export default Signup;
