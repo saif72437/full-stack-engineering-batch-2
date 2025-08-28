@@ -1,10 +1,16 @@
 import React from 'react'
 
-function MyButton({onClick, text}) {
+function MyButton({ onClick, text }) {
   return (
-     <button className='w-2xl outline-none border-none bg-slate-400 font-semibold rounded-md cursor-pointer hover:bg-slate-500 hover:text-white transition-all text-xl py-2 px-3'
-        onClick={onClick}
-     >{text}</button>
+    <button 
+      className="w-full py-3 px-4 rounded-xl font-semibold text-white text-lg 
+      bg-gradient-to-r from-indigo-500 to-indigo-600 
+      hover:from-indigo-400 hover:to-indigo-500 
+      transition-all duration-200 shadow-md disabled:opacity-50"
+      onClick={onClick}
+    >
+      {text}
+    </button>
   )
 }
 
