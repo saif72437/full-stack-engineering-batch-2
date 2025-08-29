@@ -10,3 +10,15 @@ export const client = new Client()
     .setProject(VITE_APPWRITE_PROJECT_ID); // Your project ID
 
 export const account = new Account(client);
+
+export async function getCurrentUserData(){
+    try {
+      const user = await account.get()
+      return user
+    } catch (error) {
+        console.log(error);
+        return;
+        
+    }
+
+  }
