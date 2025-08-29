@@ -16,38 +16,73 @@ function Signup() {
   const navigate = useNavigate()
 
   return (
-    <div className='w-full h-screen bg-slate-400 flex items-center justify-center'>
-        {/* card */}
-        <div className='p-4 bg-white rounded-md flex flex-col items-center justify-center gap-3'>
-           <MyHeading2 text={"Sigup"}/>
-           <MyInput onChange={(e)=>setName(e.target.value)} value={name} type={"text"} placeholder={"John Doe"}/>
-            <MyInput onChange={(e)=>setEmail(e.target.value)} value={email} type={"email"} placeholder={"John@gmail.com"}/>
-            <MyInput onChange={(e)=>setPassword(e.target.value)} value={password} type={"password"} placeholder={"******"}/>
+    <div className="min-h-screen w-full bg-gradient-to-br from-slate-200 via-slate-100 to-slate-200 flex items-center justify-center overflow-hidden px-4 sm:px-6 lg:px-8 ">
+      
+      {/* card */}
+      <div className="w-full max-w-md p-6 sm:p-8 bg-white rounded-2xl shadow-xl border border-slate-200 flex flex-col items-center gap-6">
+        
+        {/* heading */}
+        <MyHeading2 text={"Sign Up"} className="text-slate-800 text-2xl sm:text-3xl font-bold text-center" />
 
-           <MyButton onClick={async ()=>{
+        {/* inputs */}
+        <div className="flex flex-col gap-4 w-full">
+          <MyInput 
+            onChange={(e)=>setName(e.target.value)} 
+            value={name} 
+            type="text" 
+            placeholder="John Doe" 
+          />
+          <MyInput 
+            onChange={(e)=>setEmail(e.target.value)} 
+            value={email} 
+            type="email" 
+            placeholder="john@gmail.com" 
+          />
+          <MyInput 
+            onChange={(e)=>setPassword(e.target.value)} 
+            value={password} 
+            type="password" 
+            placeholder="••••••••" 
+          />
+        </div>
+
+        {/* button */}
+        <MyButton 
+          onClick={async ()=>{
             if(!email || !password || !name){
-              toast.error("Please fill all the fields")
+              toast.error("⚠️ Please fill all the fields")
             }
-
             else{
               try {
-                let User = await  account.create(ID.unique(), email, password, name)
+                setLoading(true)
+                let User = await account.create(ID.unique(), email, password, name)
 
                 if(User){
-                  toast.success("User Account Created Successfully")
+                  toast.success("🎉 User Account Created Successfully")
                   console.log(User);
-                  
                   navigate("/login")
                 }
-                
               } catch (error) {
-                
-                toast.success("Something went wrong while login user")
+                toast.error("❌ Something went wrong while creating user")
+              } finally {
+                setLoading(false)
               }
             }
-            
-           }} text={"Signup"} />
-        </div>
+          }} 
+          text={loading ? "Creating..." : "Signup"} 
+        />
+
+        {/* footer */}
+        <p className="text-sm text-slate-600 text-center">
+          Already have an account?{" "}
+          <span 
+            onClick={() => navigate("/login")} 
+            className="text-indigo-600 font-medium cursor-pointer hover:underline"
+          >
+            Login
+          </span>
+        </p>
+      </div>
     </div>
   )
 }

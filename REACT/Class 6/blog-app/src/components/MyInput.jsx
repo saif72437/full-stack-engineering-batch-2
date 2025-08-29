@@ -1,13 +1,17 @@
 import React from 'react'
 
-function MyInput({onChange, value, type, placeholder}) {
+function MyInput({ onChange, value, type, placeholder }) {
   return (
-      <input type={type} className='w-2xl outline-none rounded-md border-none ring-1 ring-slate-300 text-xl py-2 px-3' placeholder={placeholder}
-      
-        onChange={onChange}
-        value={value}
+    <input 
+      type={type} 
+      className="w-full rounded-xl border border-slate-300 focus:ring-2 
+focus:ring-indigo-500 focus:border-indigo-500 
+text-base sm:text-lg py-3 px-4 outline-none transition-all"
 
-      /> 
+      placeholder={placeholder}
+      onChange={onChange}
+      value={value}
+    /> 
   )
 }
 
