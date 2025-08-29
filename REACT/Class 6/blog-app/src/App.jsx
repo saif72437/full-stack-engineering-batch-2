@@ -8,6 +8,7 @@ import SingleBlog from "./pages/SingleBlog"
 import CreateBlog from "./pages/CreateBlog"
 import Navbar from './components/navbar'
 import { Toaster } from 'sonner'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/singleblog:id" element={<SingleBlog/>} />
               <Route path="/create" element={<CreateBlog/>} />
           </Routes>
+          <Footer/>
       </BrowserRouter>
     </div>
   )
