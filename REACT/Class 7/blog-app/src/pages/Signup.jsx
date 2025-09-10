@@ -7,9 +7,9 @@ export default function Signup() {
         
             <div className="w-full flex flex-col items-center justify-center">
         
-                <form className="md:w-96 w-80 flex flex-col items-center justify-center">
-                    <h2 className="text-4xl text-gray-900 font-medium">Sign in</h2>
-                    <p className="text-sm text-gray-500/90 mt-3">Welcome back! Please sign in to continue</p>
+                <div className="md:w-96 w-80 flex flex-col items-center justify-center">
+                    <h2 className="text-4xl text-gray-900 font-medium">Sign up</h2>
+                    <p className="text-sm text-gray-500/90 mt-3">Hello ' Create Your Account</p>
         
                  
         
@@ -37,19 +37,13 @@ export default function Signup() {
                         <input type="password" placeholder="Password" className="bg-transparent text-gray-500/80 placeholder-gray-500/80 outline-none text-sm w-full h-full" required />
                     </div>
         
-                    <div className="w-full flex items-center justify-between mt-8 text-gray-500/80">
-                        <div className="flex items-center gap-2">
-                            <input className="h-5" type="checkbox" id="checkbox" />
-                            <label className="text-sm" htmlFor="checkbox">Remember me</label>
-                        </div>
-                        <a className="text-sm underline" href="#">Forgot password?</a>
-                    </div>
+                  
         
                     <button type="submit" className="mt-8 w-full h-11 rounded-full text-white bg-indigo-500 hover:opacity-90 transition-opacity">
-                        Login
+                        Create Account
                     </button>
-                    <p className="text-gray-500/90 text-sm mt-4">Don’t have an account? <a className="text-indigo-400 hover:underline" href="#">Sign up</a></p>
-                </form>
+                    <p className="text-gray-500/90 text-sm mt-4">Don’t have an account? <a className="text-indigo-400 hover:underline" href="#">Sign In</a></p>
+                </div>
             </div>
         </div>
     );

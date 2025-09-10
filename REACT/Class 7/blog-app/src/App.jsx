@@ -1,15 +1,18 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./pages/Home"
 import Create from "./pages/Create"
-import Login from "./pages/login"
 import Signup from "./pages/Signup"
 import SingleBlog from "./pages/SingleBlog"
+import Navbar from "./components/Navbar"
 import Profile from "./pages/Profile"
+import Login from "./pages/Login"
 function App(){
 
   return (
     <div className="w-full h-screen ">
       <BrowserRouter>
+        <Navbar/>
+  
           <Routes>
               <Route path="/" element={<Home/>} />
               <Route path="/create" element={<Create/>} />
