@@ -1,8 +1,7 @@
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from "./pages/Home"
 import Create from "./pages/Create"
-import Login from "./pages/login"
-import Signup from "./pages/Signup"
+import Auth from "./pages/Auth"
 import SingleBlog from "./pages/SingleBlog"
 import Profile from "./pages/Profile"
 function App(){
@@ -13,8 +12,7 @@ function App(){
           <Routes>
               <Route path="/" element={<Home/>} />
               <Route path="/create" element={<Create/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/signup" element={<Signup/>} />
+              <Route path="/auth" element={<Auth/>} />
               <Route path="/blog/:id" element={<SingleBlog/>} />
               <Route path="/profile" element={<Profile/>} />
           </Routes>
