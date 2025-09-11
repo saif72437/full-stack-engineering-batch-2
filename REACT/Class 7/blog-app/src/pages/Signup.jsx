@@ -5,6 +5,7 @@ import Input from "../components/Input"
 import Button from "../components/Button"
 
 export default function Signup() {
+  
   const [username, setUsername] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
