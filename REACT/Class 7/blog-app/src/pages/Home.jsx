@@ -2,6 +2,10 @@ import React from 'react'
 import Card from '../components/Card'
 
 function Home() {
+
+  console.log(import.meta.env.VITE_MY_SECRET);
+  
+
   return (
     <div className='w-full h-full flex flex-col items-center'>
       <h2 className='text-4xl font-bold mb-6 mt-4'>Latest Blogs</h2>

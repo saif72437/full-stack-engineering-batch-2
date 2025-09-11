@@ -6,10 +6,12 @@ import SingleBlog from "./pages/SingleBlog"
 import Navbar from "./components/Navbar"
 import Profile from "./pages/Profile"
 import Login from "./pages/Login"
+import { Toaster } from "sonner"
 function App(){
 
   return (
     <div className="w-full h-screen ">
+      <Toaster position="bottom-center"/>
       <BrowserRouter>
         <Navbar/>
   
