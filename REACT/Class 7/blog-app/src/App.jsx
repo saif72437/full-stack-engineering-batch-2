@@ -7,23 +7,31 @@ import Navbar from "./components/Navbar"
 import Profile from "./pages/Profile"
 import Login from "./pages/Login"
 import { Toaster } from "sonner"
+import { useState } from "react"
+import UserContext from "./context/UserContext"
 function App(){
+
+  const [user, setUser] = useState(null)
 
   return (
     <div className="w-full h-screen ">
+
       <Toaster position="bottom-center"/>
-      <BrowserRouter>
-        <Navbar/>
-  
-          <Routes>
-              <Route path="/" element={<Home/>} />
-              <Route path="/create" element={<Create/>} />
-              <Route path="/login" element={<Login/>} />
-              <Route path="/signup" element={<Signup/>} />
-              <Route path="/blog/:id" element={<SingleBlog/>} />
-              <Route path="/profile" element={<Profile/>} />
-          </Routes>
-      </BrowserRouter>
+      <UserContext.Provider value={{user, setUser}}>
+
+        <BrowserRouter>
+          <Navbar/>
+    
+            <Routes>
+                <Route path="/" element={<Home/>} />
+                <Route path="/create" element={<Create/>} />
+                <Route path="/login" element={<Login/>} />
+                <Route path="/signup" element={<Signup/>} />
+                <Route path="/blog/:id" element={<SingleBlog/>} />
+                <Route path="/profile" element={<Profile/>} />
+            </Routes>
+        </BrowserRouter>
+      </UserContext.Provider>
     </div>
   )
 }

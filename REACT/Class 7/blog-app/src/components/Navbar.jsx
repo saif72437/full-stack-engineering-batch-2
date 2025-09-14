@@ -1,9 +1,11 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
+import { account } from "../appwrite/Services"
 
 
 
 export default function Navbar() {
+    const navigate = useNavigate()
     const [open, setOpen] = React.useState(false)
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
@@ -31,7 +33,14 @@ export default function Navbar() {
 
              
 
-                <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full">
+                <button className="cursor-pointer px-8 py-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full"
+                    onClick={async ()=>{
+                   await account.deleteSession('current');
+                    console.log("hello");
+                    
+                    navigate("/login")
+                }}
+                >
                     Logout
                 </button>
             </div>
@@ -50,7 +59,14 @@ export default function Navbar() {
                 <Link to="/" className="block">Home</Link>
                 <Link to="/create" className="block">Create Blog</Link>
                 <Link to="/profile" className="block">Profile</Link>
-                <button className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm">
+                <button className="cursor-pointer px-6 py-2 mt-2 bg-indigo-500 hover:bg-indigo-600 transition text-white rounded-full text-sm"
+                onClick={async ()=>{
+                     console.log("hello");
+                    await account.deleteSession('current');
+                    navigate("/login")
+                }}
+                
+                >
                     Logout
                 </button>
             </div>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { toast } from 'sonner'
 import { account } from '../appwrite/Services'
 import { useNavigate } from 'react-router-dom'
+import UserContext from '../context/UserContext'
 
 function Login() {
 
@@ -9,6 +10,8 @@ function Login() {
     const [password, setPassword] = useState("")
 
     const navigate = useNavigate()
+  
+
     async function handleLogin() {
         try {
             
@@ -16,6 +19,9 @@ function Login() {
 
             if(user){
                 toast.success("Loggedin Successfully")
+
+               
+
 
                 setTimeout(()=>{
                         navigate("/")
